@@ -1,0 +1,22 @@
+/* Media query */
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    background-color: aqua;
+}
+
+
+ /* 此功能 如果網頁框度小於800px 會是橘色 大於會是淺藍色  */
+
+@media screen and (max-width: 800px) {
+    h1 {
+        background-color: orange; 
+    }
+    
+}

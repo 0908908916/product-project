@@ -1,0 +1,146 @@
+@charset "UTF-8";
+/* 設定動畫 */
+div.animation {
+  width: 100%;
+  height: 100vh;
+  background-color: #e08958;
+  position: fixed; /* 改成這個就不會再4個 lowerfloor 裡面 覆蓋掉 */
+  top: 0;
+  z-index: 10;
+  /* 把文字放到中間 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first {
+  stroke-dasharray: 301px; /*中風破折號 該stroke-dasharray屬性是一個表示屬性，定義了用於繪製形狀輪廓的虛線和 間隙模式 stroke-dasharray是把stroke做成了是虛線的效果，線段會被拆成線段、空白、線段、空白*/
+  stroke-dashoffset: 301px; /* stroke-dashoffset 屬性是將上面的虛線推移 推移後，dasharray還是會保持循環  dashoffset的值不會大於dasharray  如果dashoffset 等於 dasharray，線段起始點會是空白 */
+  -webkit-animation: fadeInside 0.6s ease-in forwards;
+          animation: fadeInside 0.6s ease-in forwards; /* 動畫一定後面要加 forwards */
+}
+
+#second {
+  stroke-dasharray: 238px;
+  stroke-dashoffset: 238px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.3s;
+          animation: fadeInside 0.6s ease-in forwards 0.3s; /* 動畫一定後面要加 forwards 後面的0.3s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#third {
+  stroke-dasharray: 412px;
+  stroke-dashoffset: 412px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.6s;
+          animation: fadeInside 0.6s ease-in forwards 0.6s; /* 動畫一定後面要加 forwards 後面要慢慢加比較多每一個依序0.3s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#fourth {
+  stroke-dasharray: 301px;
+  stroke-dashoffset: 301px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.9s;
+          animation: fadeInside 0.6s ease-in forwards 0.9s; /* 動畫一定後面要加 forwards 後面要慢慢加比較多每一個依序0.3s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#fifth {
+  stroke-dasharray: 238px;
+  stroke-dashoffset: 238px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.2s;
+          animation: fadeInside 0.6s ease-in forwards 1.2s; /* 動畫一定後面要加 forwards 後面要慢慢加比較多每一個依序0.3s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#sixth {
+  stroke-dasharray: 370px;
+  stroke-dashoffset: 370px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.5s;
+          animation: fadeInside 0.6s ease-in forwards 1.5s; /* 動畫一定後面要加 forwards 後面要慢慢加比較多每一個依序0.3s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#seventh {
+  stroke-dasharray: 651px;
+  stroke-dashoffset: 651px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards;
+          animation: fadeInside 0.6s ease-in forwards; /* 動畫一定後面要加 forwards delay是自己的歸零 第7個 兩排字才會同時跑 因為前面跑到一半後面才會繼續跑 */
+}
+
+#eighth {
+  stroke-dasharray: 1385px;
+  stroke-dashoffset: 1385px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.4s;
+          animation: fadeInside 0.6s ease-in forwards 0.4s; /* 動畫一定後面要加 forwards 後面要慢慢加比較多每一個依序0.4s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#ninth {
+  stroke-dasharray: 1132px;
+  stroke-dashoffset: 1132px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.8s;
+          animation: fadeInside 0.6s ease-in forwards 0.8s; /* 動畫一定後面要加 forwards 後面要慢慢加比較多每一個依序0.4s 因為前面跑到一半後面才會繼續跑 */
+}
+
+#tenth {
+  stroke-dasharray: 1173px;
+  stroke-dashoffset: 1173px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 0.9s;
+          animation: fadeInside 0.6s ease-in forwards 0.9s;
+}
+
+#eleventh {
+  stroke-dasharray: 1388px;
+  stroke-dashoffset: 1388px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.2s;
+          animation: fadeInside 0.6s ease-in forwards 1.2s;
+}
+
+#twelfth {
+  stroke-dasharray: 605px;
+  stroke-dashoffset: 605px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.5s;
+          animation: fadeInside 0.6s ease-in forwards 1.5s;
+}
+
+#thirteenth {
+  stroke-dasharray: 1283px;
+  stroke-dashoffset: 1283px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 1.8s;
+          animation: fadeInside 0.6s ease-in forwards 1.8s;
+}
+
+#fourteenth {
+  stroke-dasharray: 1209px;
+  stroke-dashoffset: 1209px;
+  -webkit-animation: fadeInside 0.6s ease-in forwards 2.1s;
+          animation: fadeInside 0.6s ease-in forwards 2.1s;
+}
+
+svg {
+  -webkit-animation: fill 1s ease-in forwards 2.1s;
+          animation: fill 1s ease-in forwards 2.1s; /* 改成動畫跑完把字填滿白色 要跟最後秒數一樣 */
+}
+
+/* 定義動畫 */
+@-webkit-keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px; /* 要跑到這個地步  */
+  }
+}
+@keyframes fadeInside {
+  to {
+    stroke-dashoffset: 0px; /* 要跑到這個地步  */
+  }
+}
+/* 把字填滿的改法 */
+@-webkit-keyframes fill {
+  from {
+    fill: transparent; /*transparent 透明的意似  作用可以逐漸變白*/
+  }
+  to {
+    fill: white;
+  }
+}
+@keyframes fill {
+  from {
+    fill: transparent; /*transparent 透明的意似  作用可以逐漸變白*/
+  }
+  to {
+    fill: white;
+  }
+}/*# sourceMappingURL=amimation.css.map */

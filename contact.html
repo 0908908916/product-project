@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jie jing">
+        <meta name="robots" content="index, follow">
+        <meta name="description" content="這是 Jie jing 的個人網站。Jie jing是來自台灣網頁開發人員">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style/style.css">
+        <title>聯絡方式 | Jie jing網頁前端工程師</title>
+    </head>
+<body>
+    <!--header and navbar 標題和表格 -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="resume.html">我的履歷</a></li>
+                <li><a class="active" href="#">聯絡方式</a></li>
+                <li><a href="./台灣經濟素材檔/index.html">Taiwan Project</a></li>
+                <li><a href="./Hawaii Project/index.html">Hawaii Project</a></li>
+            </ul>            
+        </nav>
+    </header>
+
+    <!-- 製作表格 下方 -->
+
+    <main>
+        <section class="form">
+            <form>
+                <div>
+                    <label for="name">姓名:</label>
+                    <input type="text" name="name" />
+                </div>
+                <br />
+
+                <div>
+                    <label for="email">電子:</label>
+                    <input type="email" name="email" />
+                </div>
+                <br />
+
+                <div>
+                    <label for="phone">電話:</label>
+                    <input type="text" name="phone" />
+                </div>
+                <br />
+
+                <div>
+                    <label for="need">需求:</label>
+                    <textarea name="need" id="need" rows="10"></textarea> <!-- 製作一個留言板 -->
+                </div>
+                <br />
+
+                <button type="submit">提交表單</button>
+                <br />
+            </form>
+        </section>    
+            <div class="line"></div>   <!-- 設定中間一條線 -->
+            <section class="contact">
+                <div class="content">
+                    <h2>我的電話:0908908916</h2>
+                    <br />
+                    <h2>Email:karta83916@gmail.com</h2>
+                    <br />
+                    <h2>聯絡時間:中午12:00-13:00 晚上17:00-20:00</h2>
+                    <br />
+                    <h2>其他聯絡:臉書 IG</h2>
+
+                </div>
+            </section>
+       
+    </main>
+
+    <!--links for facebook, instagram and github-->
+    <footer>
+        <a href="#"><img src="./ICONS 下個物件/facebook.svg" alt="facebook" title="facebook page"/></a>
+        <a href="#"><img src="./ICONS 下個物件/instagram.svg" alt="instagram" title="instagram page"/></a>
+        <a href="#"><img src="./ICONS 下個物件/github-brands 1.svg" alt="github" title="github page"/></a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,137 @@
+/* 所有 padding margin 射成零 網頁才可以貼齊外框 */
+/* box-sizing:content-box 預設會出現水平移動軸(外擴)   box-sizing:border-box 用這個處理就不會有水平移動軸 (內縮) */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+    font-family: 'Noto Sans TC', sans-serif; /* 中文字體 */
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+
+header {
+    background-color: #D9D9D9;
+    width: 100%;
+    padding: 1rem; /* 上下左右加了間隔16px */
+}
+
+nav {
+    background-color: #737783;
+}
+
+nav ul {
+    display: flex; /* 讓直列變橫列 */
+    padding-left: 1rem; /* 讓左邊有一段空格距離 */
+    list-style-type: none; /* 設定這個字旁邊的圖案就會不見 */ 
+}
+
+nav ul li {
+    padding: 0.5rem 0.75rem; /* 導覽距離隔開 上下:0.5rem 左右:0.75rem */
+    
+}
+
+nav ul li a {
+    color: rgb(231, 226, 226);  /* 正確設定字顏色的地方 才可以設定 <a> */
+    text-decoration: none; /* 底線會不見 */
+    font-size: 1.25rem;  /* 改變裡面大小 */
+    transition: all 0.3s ease; /* 漸漸改顏色的動畫效果 (游標移到的位置) */
+}
+
+nav ul li a:hover {
+    color: white;  /* 設定游標移到的字體 游標在上面會呈現白色 */
+}
+
+.headerText {
+    font-size: 1rem;  /* 設定class 改字的大小 */
+}
+
+.headerTitle {
+    font-size: 2.5rem; /* 設定class 改字的大小 */
+}
+
+
+
+/* 將左右兩邊隔開來的設定
+display: flex; 設定水平的橫向排列
+section.left  section.right  (padding: 1.5rem;) 設定距離隔開  */
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section.left,
+section.right {
+    padding: 1.5rem;
+}
+
+section.left h4 {
+    font-size: 1.25rem;  /* 改變字體大小 */
+    display: flex;
+    flex-direction: column; /* 直排 */
+    align-items: center;  /* 把地圖位置設到中間 */
+
+}
+
+section.right h4 {
+    font-size: 1.25rem;  /* 改變字體大小 */
+    text-align: center; /* 將字體移動到中間 */
+}
+
+section.left {
+    flex: 4 1 550px;
+
+}
+
+section.right {
+    display: flex;
+    flex-direction: column; /* 直排 */
+    align-items: center;  /* 把地圖位置設到中間 */
+    flex: 1 1 250px;  /* grow, shrink, basis */ 
+}
+
+section.right p {
+    margin: 1rem 0rem; /* 地圖跟字隔一點空間 */
+}
+
+
+.active {
+    color: white; /* 把首頁字設定顏色 */
+}
+
+.pic {
+    cursor: pointer; /* 設定移到圖案有手指圖案 */
+}
+
+.pic:hover{
+    opacity: 0.5; /* 設定游標移過去圖片透明度 */
+}
+
+/* 嵌入圖表的 網站上複製 google charts  用id 開頭就是# 設定寬 高 開網頁要按Ctrl + F5 */
+#curve_chart {
+    width: 100%;
+    height: 80%;
+}
+
+
+/* 導覽未超過625px 會是直列 超過為橫列 */
+@media screen and (max-width: 650px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+}
+
+/*  網站的這個 curve_chart 不會被拉長 開網頁要按Ctrl + F5 */
+@media screen and (max-width: 550px) {
+    #curve_chart {
+        width: 100%;
+        height: 30%;
+    }
+    
+}

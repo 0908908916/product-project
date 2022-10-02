@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+.orange {
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  z-index: -1;
+  width: 55vw;
+  height: 150vh;
+}
+
+header nav {
+  width: 100%;
+}
+header nav ul {
+  padding: 2rem;
+  width: 70%;
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+header nav ul li {
+  font-size: 2rem;
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.active {
+  color: #e08958;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+}
+main section.left {
+  flex: 3 1 500px;
+  padding: 2rem;
+}
+main section.left h1 {
+  font-size: 4rem;
+  color: #e08958;
+}
+main section.left p {
+  font-size: 1.5rem;
+  padding: 1rem 1rem;
+}
+main section.right {
+  flex: 1 1 600px;
+  position: relative;
+}
+main section.right img {
+  border-radius: 50%;
+  width: 20vw;
+  height: 20vw;
+  position: absolute;
+  top: 30vh;
+  right: 25vw;
+  transform: translate(-10%);
+}
+main section.table {
+  flex: 3 1 500px;
+  padding: 2rem;
+}
+main section.table table {
+  border-collapse: collapse; /* 設定這個才會執行下面的 solid */
+}
+main section.table table tr {
+  border-bottom: 2px solid gray; /* 把線條裝飾出來 灰色線條 */
+  transition: all 0.2s ease; /* 游標移過去顏色會慢慢改變 */
+}
+main section.table table tr td {
+  padding: 1rem;
+}
+main section.table table tr:hover {
+  background-color: #e79f76; /* 滑鼠移過去就會顯示橘色 */
+}
+main section.picture {
+  flex: 1 1 600px;
+  position: relative; /* 對應下面要設定相對的 */
+}
+main section.picture img {
+  width: 30vw; /* 高度會變小 */
+}
+main section.picture div.orangeRect {
+  width: 30vw; /* 寬度 */
+  height: 70vh; /* 高度 */
+  background-color: #e79f76;
+  position: absolute; /* 想讓這個橘色背景移動一下 */
+  top: 30px; /* 往上移動 */
+  left: 80px; /* 往左移動 */
+  z-index: -1; /* 要設定讓圖片在背景 */
+}
+main section.form {
+  flex: 1 1 600px;
+}
+main section.form form {
+  min-height: 70vh; /* 在視窗縮小才可以做修改 */
+  display: flex;
+  flex-direction: column; /* 直列 */
+  justify-content: space-around; /* 均匀排列每个元素 每个元素周围分配相同的空间 */
+  align-items: center; /* 置中 */
+  padding: 1.5rem;
+}
+main section.form form div {
+  margin: 0.5rem; /* 設定距離 表格才不會連在一起 */
+}
+main section.form form div label {
+  font-size: 1.5rem; /* 設定字的大小 */
+  margin-right: 1rem;
+}
+main section.form form div input {
+  background-color: #e79f76; /* 表格裡面裝飾顏色 */
+  color: white;
+  font-size: 1.25rem;
+  padding: 0.3rem 0.75rem;
+  border: none; /* 框的陰影取消 */
+  width: 90%; /* 框度設定一樣 */
+}
+main section.form form div textarea {
+  vertical-align: top; /* 可以用來設計網頁垂直方向對齊  把需求的這各字移到上面 */
+  background-color: #e79f76; /* 表格裡面裝飾顏色 */
+  color: white;
+  font-size: 1.25rem;
+  border: none; /* 框的陰影取消 */
+  width: 90%; /* 框度設定一樣 */
+}
+main section.form form button {
+  align-self: center; /* 可以覆寫原本 align-item */
+  background-color: #d17f50;
+  color: white;
+  border: none;
+  cursor: pointer; /* 移動到圖片會有手指的圖案 */
+  padding: 0.75ren 3rem;
+  font-size: 2rem;
+  border-radius: 10px; /* 設定外框圓弧 */
+}
+main div.line {
+  background-color: gray; /* 設定中間一條線 */
+  width: 3px;
+}
+main section.contact {
+  flex: 1 1 500px;
+  display: flex; /* 置中前置 */
+  align-items: center; /* 置中 */
+  padding: 2rem;
+}
+main section.contact h2 {
+  margin: 1rem 0rem;
+}
+
+footer a {
+  padding: 1rem;
+}
+
+/* 1100px 是因為左邊跟右邊的版面加起來 1100px */
+@media screen and (max-width: 1100px) {
+  .orange {
+    opacity: 0.5; /* 設定透明度 */
+  }
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  header nav ul li {
+    padding: 1rem 0rem;
+    border-bottom: 2px solid gray;
+  }
+  main section.right {
+    /* 把照片置中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem; /* 照片跟 footer 的距離 */
+  }
+  main section.right img {
+    position: static; /* static 靜態的 */
+    transform: none;
+    width: 50vw;
+    height: 50vw;
+  }
+  main section.picture {
+    display: flex; /* 位置置中 */
+    justify-content: center; /* 位置置中 */
+    align-items: center; /* 位置置中 */
+  }
+  main section.picture img {
+    width: 50vw; /* 螢幕縮小照片會變小 */
+  }
+  main section.picture div.orangeRect {
+    display: none; /* 當螢幕縮小這個橘色背景會不見 */
+  }
+}/*# sourceMappingURL=style.css.map */

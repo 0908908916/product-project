@@ -1,0 +1,114 @@
+<!-- 工業改革 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self" />
+    <title>工業改革 | 台灣發展歷史</title>
+    <meta name="description" content="此網站展示台灣過去五十至七十年的經濟發展歷史，以及促成其發展的相關政策">
+    <!-- google font setting 中文字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 改網頁的圖片(以下) -->
+    <link rel="shortcut icon" href="./taiwanIcon.png">
+    <link rel="bookmark" href="./taiwanIcon.png">
+
+    <!-- 嵌入圖表 網站上複製 google charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawStuff);
+
+      function drawStuff() {
+        var data = new google.visualization.arrayToDataTable([
+          ['year', 'salary'],
+          ["45", 300],
+          ["53", 450],
+          ["57", 600],
+          ["67", 2400],
+          ['69', 3300]
+        ]);
+
+        var options = {
+          width: 800,
+          legend: { position: 'none' },
+          chart: {
+            title: '勞動薪資50-70年成長',
+            subtitle: '$$$$$$' },
+          axes: {
+            x: {
+              0: { side: 'top', label: '勞動薪資50-70年成長'} // Top x-axis.
+            }
+          },
+          bar: { groupWidth: "90%" }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('top_x_div'));
+        // Convert the Classic options to Material options.
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      };
+    </script>
+  
+    <!-- ========== -->
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="stylesheet" href="./台灣 icon/twicon.css">
+</head>
+<body>
+    <!-- 標題 -->
+    <!-- <header> 標籤使用定義一個標題欄 -->
+        <header>
+            <h1 class="headerTitle"><i class="twicon-td-flag"></i> 台灣經濟發展歷史</h1>
+            <h3 class="headerText">過去70年台灣經濟發展的歷史以及相關政策</h3>
+        </header>
+    
+        <!-- 導覽 -->
+        <!-- HTML <nav> 元素代表一個中提供導航欄的鏈接區域，不管是當前導航欄或其他示例的當前網頁的段落，
+        還是這個鏈接的最後一個示例的當前網頁的段落，或者會顯示類似的網頁，
+        常見的導航欄示例有菜單、內容的表單，以及頁面本身。
+        <i class="twicon-lovers-brg"></i>  這個是網站圖案的CSS 複製下來
+        (<link rel="stylesheet" href="./台灣 icon/twicon.css">) -->
+        <nav>
+            <ul>
+                <li><a href="./index.html"><i class="twicon-main-island"></i> 首頁</a></li>
+                <li><a href="./second.html"><i class="twicon-lovers-brg"></i> 農業改革</a></li>
+                <li><a class="active" href="./third.html"><i class="twicon-l-taiwan-rw"></i> 工業改革</a></li>
+                <li><a href="./fourth.html"><i class="twicon-taipei101"></i> 經濟起飛</a></li>
+                <li><a href="./fifth.html"><i class="twicon-flying-fish"></i> 風景圖</a></li>
+            </ul>
+    
+        </nav>
+        <!-- 這是主要內容 -->
+        <!-- <main> 標籤（tag）是用來放頁面主要信息的區塊（正文的主要內容） -->
+        <!-- section標簽將內容分為小節和小節。如果需要兩個頁眉或頁腳或文檔的其他任何部分，則使用section標簽 -->
+        <main>
+            <section class="left">
+                <p>
+                    工業革命（英語：Industrial Revolution），又稱產業革命，更準確地說是第一次工業革命，約於1760年代興起，持續到1830年代至1840年代。
+                    而後產生所謂的第二次工業革命（1870年）和20世紀以來的第三次工業革命。在這段時間裡，人類生產與製造方式逐漸轉為機械化，出現了以機器取代人力、
+                    畜力的趨勢，以大規模的工廠生產取代手工生產的一場革命，引發自現代的科學革命。
+                    由於機器的發明及運用成為了這個時代的標誌，因此歷史學家稱這個時代為機器時代
+                    （the Age of Machines）
+                </p>
+                <br />
+                <p>
+                    在瓦特改良蒸汽機之前，整個生產所需動力依靠人力、畜力、水力和風力。伴隨蒸汽機的發明和改進，工廠不再依河或溪流而建，很多以前依賴人力與手工完成的工作，
+                    自蒸汽機發明後被機械化生產取代。工業革命是一般政治革命不可比擬的巨大變革，與1萬年前農業革命一樣，革命其影響涉及人類社會生活的各個方面，使社會發生了巨大的變革，
+                    對人類的現代化進程推動起到不可替代的作用，把人們推向了一個嶄新的「蒸汽時代」。
+                </p>
+                <br />
+                <!-- 嵌入圖表 網站上複製 google charts 要放得地方 -->
+                <div id="top_x_div" style="width: 500px; height: 300px;"></div>
+                
+
+            </section>
+            
+
+            <section class="right">
+                <h1>蒸汽機</h1>
+                <img width="450" height="500" src="./工業革命.jpg" alt="industry">
+
+            </section>
+        </main>

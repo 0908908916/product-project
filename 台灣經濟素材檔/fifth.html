@@ -1,0 +1,70 @@
+<!-- 風景圖 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base target="_self" />
+    <title>風景圖  | 台灣發展歷史</title>
+    <meta name="description" content="此網站展示台灣過去五十至七十年的經濟發展歷史，以及促成其發展的相關政策">
+    <!-- google font setting 中文字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <!-- 改網頁的圖片(以下) -->
+    <link rel="shortcut icon" href="./taiwanIcon.png">
+    <link rel="bookmark" href="./taiwanIcon.png">
+  
+    <!-- ========== -->
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="stylesheet" href="./台灣 icon/twicon.css">
+</head>
+<body>
+    <!-- 標題 -->
+    <!-- <header> 標籤使用定義一個標題欄 -->
+        <header>
+            <h1 class="headerTitle"><i class="twicon-td-flag"></i> 台灣經濟發展歷史</h1>
+            <h3 class="headerText">過去70年台灣經濟發展的歷史以及相關政策</h3>
+        </header>
+    
+        <!-- 導覽 -->
+        <!-- HTML <nav> 元素代表一個中提供導航欄的鏈接區域，不管是當前導航欄或其他示例的當前網頁的段落，
+        還是這個鏈接的最後一個示例的當前網頁的段落，或者會顯示類似的網頁，
+        常見的導航欄示例有菜單、內容的表單，以及頁面本身。
+        <i class="twicon-lovers-brg"></i>  這個是網站圖案的CSS 複製下來
+        (<link rel="stylesheet" href="./台灣 icon/twicon.css">) -->
+        <nav>
+            <ul>
+                <li><a href="./index.html"><i class="twicon-main-island"></i> 首頁</a></li>
+                <li><a href="./second.html"><i class="twicon-lovers-brg"></i> 農業改革</a></li>
+                <li><a  href="./third.html"><i class="twicon-l-taiwan-rw"></i> 工業改革</a></li>
+                <li><a  href="./fourth.html"><i class="twicon-taipei101"></i> 經濟起飛</a></li>
+                <li><a class="active" href="./fifth.html"><i class="twicon-flying-fish"></i> 風景圖</a></li>
+            </ul>
+    
+        </nav>
+        <!-- 這是主要內容 -->
+        <!-- <main> 標籤（tag）是用來放頁面主要信息的區塊（正文的主要內容） -->
+        <!-- section標簽將內容分為小節和小節。如果需要兩個頁眉或頁腳或文檔的其他任何部分，則使用section標簽 -->
+        <main>
+            <section class="left">
+                <h4>武嶺</h4>
+                <img class="pic" width="800" height="500" src="./武嶺.jpg" alt="scape">
+
+                <h4>花蓮</h4>
+                <img class="pic" width="800" height="500" src="./花蓮.jpg" alt="scape1">
+
+            </section>
+
+
+            <section class="right">
+                <h4>小琉球</h4>
+                <img class="pic" width="800" height="500" src="./小琉球.jpg" alt="scape2">
+
+                <h4>綠島</h4>
+                <img class="pic" width="800" height="500" src="./綠島.jpg" alt="scape3">
+
+            </section>
+
+        </main>
